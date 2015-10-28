@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--[if IE 8]>      <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>      <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+<!-- Data to be passed to templates/headers/header-x.tpl.html -->
+<!-- End of Data -->
+<!-- Tony Edit 2/4/15 -->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Seismic Productions</title>
+    <meta name="keywords" content="Seismic Productions" />
+    <meta name="description" content="Seismic Productions">
+    <meta name="author" content="Right for Left Studios">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="img/ico/favicon.ico">
+
+    <!-- CSS STYLES -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/grid-12-responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/micro.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/chrome" href="css/chrome.css"> <!-- chrome only css -->
+
+    <!-- jQuery Script -->
+    <script type="text/javascript" src="js/modernizr.js"></script>
+    
+    <!-- Isotope Scripts -->
+    <script>
+    var jq = jQuery.noConflict();
+    jq(document).ready(function() {
+        //    jq("html").niceScroll();  // The document page (html)
+
+        jq("#boxscroll2").niceScroll({
+            touchbehavior: false,
+            cursorcolor: "#FF582A",
+            cursorborder: "#FF582A",
+            cursorborderradius: "0px",
+            cursoropacitymax: 0.7,
+            cursorwidth: 16,
+            background: "#202020",
+            autohidemode: true
+        });
+    });
+
+    jq(function() {
+        var nice = jq(":nicescroll").getNiceScroll(0);
+        jq("#div1").html(jq("#div1").html() + ' ' + nice.version + ' (jq:' + jq().jquery + ')')
+    })
+
+    function scrolltotop() {
+        jq("#boxscroll2").scrollTop(0);
+    };
+    </script>
+
+    <!-- Create Fancybox -->
+    <script type="text/javascript">
+    var J = jQuery.noConflict();
+    J(document).ready(function() {
+        J(".various").fancybox({
+            maxWidth    : 900,
+            maxHeight    : 700,
+            fitToView    : true,
+            width        : '80%',
+            height        : '80%',
+            autoSize    : true,
+            closeClick    : false,
+            openEffect    : 'elastic',
+            closeEffect    : 'elastic'
+        });
+        
+    });
+    </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="js/html5shiv.js"></script>
+      <script type="text/javascript" src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-smooth-scrolling="1" class="contact-body">
+<!-- HEADER -->
+	<header>
+		<div class="header-wrap">
+			<div class="header-left-column">
+				<img src="images/seismic-logo.png" alt="seismic logo"/>
+			</div>
+			<div class="header-right-column">
+                <!-- Search Box -->
+                <div class="search-box">
+                    <div class="vc_menu-search-wrapper pull-right">
+                        <div class="vc_menu-search">
+                            <div class="search-button"></div>
+                            <div id="googleSearch">
+                                <script>
+                                  (function() {
+                                    var cx = '004169031177210855376:_w-zkmsxiws';
+                                    var gcse = document.createElement('script');
+                                    gcse.type = 'text/javascript';
+                                    gcse.async = true;
+                                    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                        '//cse.google.com/cse.js?cx=' + cx;
+                                    var s = document.getElementsByTagName('script')[0];
+                                    s.parentNode.insertBefore(gcse, s);
+                                  })();
+                                </script>
+                                <gcse:search></gcse:search>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Show Menu-->
+                    <script>
+                        $(function(){
+                            $(".vc_menu-search").on("click", function(){
+                                if ($(this).width(35)) {
+                                    $(this).animate({"width":"280px"});
+                                    $(this).animate({"height":"74px"});
+                                    document.getElementById('googleSearch').style.display = "block";
+                                }
+                                else {
+                                    $(this).animate({"width":"35px"});
+                                    $(this).animate({"height":"25px"});
+                                    document.getElementById('googleSearch').style.display = "none";
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+
+				<div class="contact-box">
+					<p>T 323.957.3350</p>
+					<a href=""><img src="images/facebook.png" alt="facebook logo"/></a>
+					<a href=""><img src="images/twitter.png" alt="twitter logo"/></a>
+				</div>
+			</div>
+		</div>
+	</header> 
+
+<!-- TOP NAV -->
+    <nav class="clearfix">
+        <div class="nav-wrap">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-work.html">Our Work</a></li>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="contact-us.html" class="current">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- CONTENT -->
+
+	<div class="message-success">
+		<h2>Thank you for your message.</h2>
+		<p>Someone from our office will be in touch with you soon.</p>
+	</div>
+		
+</div>
+
+	
+<footer>
+	<div class="footer-wrap">
+		<p>&copy; 2015 SEISMIC PRODUCTIONS ALL RIGHTS RESERVED</p>
+	</div>
+</footer>
+
+<!-- Javascript =============================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/theme.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
