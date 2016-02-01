@@ -2,6 +2,35 @@
 
 'use strict';
 
+//Google Search
+  (function() {
+    var cx = '004169031177210855376:_w-zkmsxiws';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+
+// Show Search
+    $(function(){
+        $(".vc_menu-search").on("click", function(){
+            if ($(this).width(35)) {
+                $(this).animate({"width":"280px"});
+                $(this).animate({"height":"auto"});
+                document.getElementById('googleSearch').style.display = "block";
+            }
+            else {
+                $(this).animate({"width":"35px"});
+                $(this).animate({"height":"25px"});
+                document.getElementById('googleSearch').style.display = "none";
+            }
+        });
+    });
+
+
 // Create Fancybox 
 var J = jQuery.noConflict();
 J(document).ready(function() {
@@ -175,6 +204,8 @@ if ( typeof define === 'function' && define.amd ) {
 		isOpen = !isOpen;
 	}
 
-	init();
+  init();
 
 })();
+
+

@@ -168,12 +168,12 @@ p, a{
 /* ==============================HEADER ============================== */
 
 header {
-	background-image: -ms-linear-gradient(left, rgba(0,0,0,.8) 0%, rgba(51,51,51,.8) 100%);
-	background-image: -moz-linear-gradient(left, rgba(0,0,0,.8) 0%, rgba(51,51,51,.8) 100%);
-	background-image: -o-linear-gradient(left, rgba(0,0,0,.8) 0%, rgba(51,51,51,.8) 100%);
-	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0,0,0,.8)), color-stop(1, rgba(51,51,51,.8)));
-	background-image: -webkit-linear-gradient(left, rgba(0,0,0,.8) 0%, rgba(51,51,51,.8) 100%);
-	background-image: linear-gradient(to right, rgba(0,0,0,.8) 0%, rgba(51,51,51,.8) 100%);
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(43,0,0,.8) 100%);
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(43,0,0,.8) 100%);
+	background-image: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(43,0,0,.8) 100%);
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0,0,0,1)), color-stop(1, rgba(43,0,0,.8)));
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(43,0,0,.8) 100%);
+	background-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(43,0,0,.8) 100%);
 	height: auto;
 	left: 0;
 	overflow: hidden;
@@ -248,6 +248,16 @@ header .row {
 	text-align: right;
 }
 
+#loading {
+	display: block;
+    height: 60px;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    width: 60px;
+    z-index: 1000;
+}
+
 
 /* =================================== SEARCH MENU =================================== */
 
@@ -262,7 +272,8 @@ header .row {
 .vc_menu-search{
 	float: right;
 	height: auto;
-	width: 35px;
+	padding-right: 10px;
+	width: 26px;
 }
 
 .search-button {
@@ -383,15 +394,26 @@ button:focus {
 	outline:none;
 }
 
+.btn-default {
+	border: none;
+	border-radius: none;
+	color: #ffffeb;
+    background-color: #611e00;
+}
+
+
 /*MAIN BACKGROUND*/
 .main-wrapper, .contact-body, .work-body{
-	background-image: -ms-linear-gradient(right, #1C1C1C 0%, #5c5c5c 100%);
-	background-image: -moz-linear-gradient(right, #1C1C1C 0%, #5c5c5c 100%);
-	background-image: -o-linear-gradient(right, #1C1C1C 0%, #5c5c5c 100%);
-	background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #1C1C1C), color-stop(1, #5c5c5c));
-	background-image: -webkit-linear-gradient(right, #1C1C1C 0%, #5c5c5c 100%);
-	background-image: linear-gradient(to left, #1C1C1C 0%, #5c5c5c 100%);
+	background-image: -ms-linear-gradient(right, #1C1C1C 0%, #211c1c 100%);
+	background-image: -moz-linear-gradient(right, #1C1C1C 0%, #211c1c 100%);
+	background-image: -o-linear-gradient(right, #1C1C1C 0%, #211c1c 100%);
+	background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #1C1C1C), color-stop(1, #211c1c));
+	background-image: -webkit-linear-gradient(right, #1C1C1C 0%, #211c1c 100%);
+	background-image: linear-gradient(to left, #1C1C1C 0%, #211c1c 100%);
 	overflow: auto;
+}
+.contact-body.about {
+	height: 0;
 }
 
 .pageHead h2{
@@ -528,63 +550,73 @@ button:focus {
 /* Contact Form Overrides */
 .ucf fieldset {
     border: none;
-    padding:0;
+    padding: 0;
 }
 .ucf fieldset legend {
-	display:none;
+	display: none;
 }
 .ucf fieldset .field-wrapper label {
-	color:#000;
-	font-size:1em;
-	text-shadow:none;
-	width:100%;
+	color: #000;
+	font-size: 1em;
+	text-shadow: none;
+	width: 100%;
 }
 .ucf fieldset .field-wrapper label span {
-	display:none;
+	display: none;
 }
 .ucf * {
     outline: none;
 }
 .ucf .field-wrapper {
-	margin-bottom:0;
+	margin-bottom: 0;
 }
 .ucf .field-wrapper input[type="text"],
 .ucf .field-wrapper input[type="email"],
 .ucf .field-wrapper input[type="tel"],
 .ucf .field-wrapper select,
 .ucf .field-wrapper textarea {
-	background-color:#CCC;
-	border:none;
-	border-radius:0;
-	padding:0 10px 0;
-	width:100%;
+	color: #fff;
+	background-color: #333;
+	border: none;
+	border-radius: 0;
+	padding: 0 10px 0;
+	width: 100%;
 }
 .ucf .field-wrapper select {
-	height:27px;
-	line-height:27px;
+	height: 27px;
+	line-height: 27px;
 }
 .ucf .message {
-	margin:0;
+	margin: 0;
 }
 .g-recaptcha {
-	padding-left:0;
+	padding-left: 0;
 }
 .g-recaptcha iframe {
-	background-color:transparent;
-	width:100%;
+	background-color: transparent;
+	width: 100%;
 }
 .ucf button[type="submit"] {
-	background-color:#FF5428;
-	border-radius:0;
-	margin-left:0;
+	background-color: #FF5428;
+	border-radius: 0;
+	margin-left: 0;
 }
 .ucf button[type="submit"]:hover {
 	background-color:#CCC;
-	color:#000;
+	color: #000;
 }
 
 
 /* ========================= */
+
+/* ==================== VIDEO PAGES ======================= */
+.playerPage {
+	overflow: hidden;
+}
+
+/* ======================================================== */
+
+
 
 .form-input{
 	width: 100%;
@@ -766,6 +798,7 @@ footer {
 #production-title h1 {
 	color: #ff582a;
 	font-size: 2.6em;
+	line-height: 1em;
 	letter-spacing:3px;
 	margin-bottom:10px;
 	text-align: left;
@@ -857,6 +890,7 @@ footer {
 
 /*OTHER HELPERS
 =======================================================================*/
+.hidden {display:none;}
 .pullleft {float:left;}
 .pullright {float:right;}
 .rt-image {
@@ -922,7 +956,7 @@ footer {
 /*================================= RESPONSIVE SETTINGS ====================================*/
 @media (max-width: 375px){
 	.sp-video {
-		margin-top: 0;
+		margin-top: -60px;
 	}
 	#player {
 		height: 140px;
@@ -931,9 +965,43 @@ footer {
 		font-size: 1.6em;
 		line-height: 1em;
 	}
+
+	/* Video Nav */
+		#video-nav {
+			height: auto;
+			margin-top: 0;
+			padding: 5px;
+		}
+		/*
+		#video-nav:before {
+			content: "Select a Spot";
+			color: #fff;
+		}
+		#video-nav:hover li {
+			display: block;
+		}
+		*/
+		#video-nav li {
+			/*display: none;*/
+			padding: 5px;
+		}
+		#video-nav li:first-child {
+			margin-left: 0;
+		}
+		#video-nav li h4 {
+			font-size: .9em;
+			text-align: center;
+		}
+		.sp-video h4 {
+			margin: 0;
+		}
+
+	#player {
+		height: 28%;
+	}
 }
 
-@media (max-width: 627px){
+@media (min-width: 376px) and (max-width: 627px){
 	.sp-video {
 		margin-top: 0;
 	}
@@ -946,7 +1014,7 @@ footer {
 	}
 }
 
-@media (max-width: 767px){	
+@media (min-width: 628px) and (max-width: 767px){	
 	header {
 		height: auto;
 		margin-bottom:8px;
@@ -956,7 +1024,7 @@ footer {
 		margin-top: 0;
 	}
 	#player {
-		height: 65%;
+		height: 40%;
 	}
 	#production-title h1 {
 		font-size: 1.6em;

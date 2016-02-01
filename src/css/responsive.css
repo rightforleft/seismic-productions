@@ -1,9 +1,9 @@
-@media (max-width: 375px){
+@media (max-width: 374px){
 	header .header-left-column img {
-		width: 80%;
+		width: 100%;
 	}
 	header {
-		border-bottom: 4px solid #888;
+		border-bottom: 1px solid #888;
 		margin-bottom: 0;
 	}
 	footer {
@@ -24,44 +24,18 @@
 		margin-top: 0;
 		width: 100%;
 	}
-	#container.grid {
-		margin-left: 16px;
+	.grid-item {
+		margin-bottom: 6px;
 	}
 	.grid-item,
 	.grid-sizer {
-		width: 71px;
+		width: 48%;
 	}
-	.grid-item--width2 { 
-		width: 288px;
+	.gutter-sizer {
+		width: 2.5%;
 	}
-
-	.viewLG {
-	  border: 0px solid #fff;
-	  cursor: default;
-	  float: left;
-	  height: 176px;
-	  margin-top: 8px;
-	  max-width: 285px;
-	  overflow: hidden;
-	  position: relative;
-	  text-align: center;
-	  width: 100%;
-	}
-	.viewLG .mask,.viewLG .content {
-	  height: 176px;
-	  left: 0;
-	  max-width: 285px;
-	  overflow: hidden;
-	  position: absolute;
-	  top: 0;
-	  width: 100%;
-	}
-	.viewLG img {
-	   display: inline;
-	   height: auto;
-	   max-width: 285px;
-	   position: relative;
-	   width: 100%;
+	.grid-item.grid-item--width2 { 
+		width: 99%;
 	}
 	.display-work-wrap {
 		margin: 0 10px 0;
@@ -72,12 +46,12 @@
 	}
 }
 
-@media (min-width: 376px) and (max-width: 627px){
+@media (min-width: 375px) and (max-width: 627px){
 	header .header-left-column img {
-		width: 80%;
+		width: 100%;
 	}
 	header {
-		border-bottom: 4px solid #888;
+		border-bottom: 1px solid #888;
 		margin-bottom: 0;
 	}
 	footer {
@@ -104,20 +78,23 @@
 	}
 	.grid-item,
 	.grid-sizer {
-		width: 91px;
+		width: 48%;
 	}
-	.grid-item--width2 { 
-		width: 374px;
+	.gutter-sizer {
+		width: 3%;
+	}
+	.grid-item.grid-item--width2 { 
+		width: 99%;
 	}
 }
 
 @media (min-width: 628px) and (max-width: 767px) {
 	header {
-		border-bottom: 4px solid #888;
+		border-bottom: 1px solid #888;
 		margin-bottom: 0;
 	}
 	header .header-left-column img {
-		width: 70%;
+		width: 100%;
 	}
 	footer {
 		height: auto;
@@ -147,15 +124,16 @@
 		width: 95%;
 	}
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1032px) {
 	header {
 		padding: 0 15px 0 5px;
 	}
 	header .header-left-column {
 		margin: 0;
+		width: 58%;
 	}
 	header .header-left-column img {
-		width: 70%;
+		width: 100%;
 	}
 	.content-wrap aside.quarter-left {
 		width: 40%;
@@ -166,18 +144,15 @@
 		margin-top: 10%;
 	}
 }
-@media (min-width: 1200px) {
-	
+@media (max-width: 937px){
+	#container.grid {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
-
-/*Body Boxed Special Requirement*/
-@media (min-width: 1200px) and (max-width: 1260px){
-
-}
-
-@media (min-width: 992px) and (max-width: 1016px){
-	
-}
-@media (max-width: 780px){
-	
+@media (min-width: 938px) and (max-width: 1080px){
+	#container.grid {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
 }

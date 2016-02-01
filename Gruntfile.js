@@ -1,12 +1,14 @@
 module.exports = function(grunt) {
 
 	// Default task(s)
-	grunt.registerTask('default', ['uglify']);
+	grunt.registerTask('default', ['cleanup','htmlmin:dist','concat:css', 'concat:cssResponsive', 'cssmin', 'copy:css', 'copy:fancyboxImages', 'copy:fonts','concat:jsFancyBox', 'concat:jsOffCanvasMenu', 'copy:js', 'copy:contactForm', 'copy:favicons','copy:images','uglify']);
 	grunt.registerTask('css', ['concat:css', 'concat:cssResponsive', 'cssmin', 'copy:css', 'copy:fancyboxImages']);
 	grunt.registerTask('fonts', ['copy:fonts']);
 	grunt.registerTask('checkcss', ['csslint']);
 	grunt.registerTask('js', ['concat:jsFancyBox', 'concat:jsOffCanvasMenu', 'copy:js', 'copy:contactForm', 'uglify']);
 	grunt.registerTask('js-test' , ['copy:jsTestBuild']);
+	grunt.registerTask('html', ['htmlmin:dist']);
+	grunt.registerTask('cleanup', ['clean']);
 
 	// Load the plugin that provides the "uglify" task.
 	grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -14,6 +16,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 
 	// Project Configuration
 	grunt.initConfig({
@@ -29,10 +33,9 @@ module.exports = function(grunt) {
 					'src/css/animate.min.css',
 					'src/plugins/off-canvas-menu/css/menu_bubble.css',
 					'src/plugins/fancybox/source/jquery.fancybox.css',
-					'src/plugins/fancybox/source/jquery.fancybox-buttons.css',
-					'src/plugins/fancybox/source/jquery.fancybox-thumbs.css',
+					'src/plugins/fancybox/source/helpers/jquery.fancybox-buttons.css',
+					'src/plugins/fancybox/source/helpers/jquery.fancybox-thumbs.css',
 					'src/plugins/isotope-plugin/css/isotope.css'
-					//'src/plugins/isotope-plugin/css/isotope-v2.css'
 				],
 				dest: 'build/css/seismic.css'
 			},
@@ -120,8 +123,7 @@ module.exports = function(grunt) {
 			},
 			ourWork: {
 				files: {
-					//'dist/js/ourWork.min.js': ['src/js/ourwork.js']
-					'dist/js/ourWork.min.js': ['src/js/ourwork-v2.js']
+					'dist/js/ourWork.min.js': ['src/js/ourwork.js']
 				}
 			}
 		},
@@ -137,8 +139,8 @@ module.exports = function(grunt) {
 					{expand: false, src: ['src/js/caroufredsel.js'], dest: 'dist/js/caroufredsel.js'},
 					{expand: false, src: ['src/js/plugins.js'], dest: 'dist/js/plugins.js'},
 					{expand: false, src: ['src/plugins/prettyPhoto-plugin/js/jquery.prettyPhoto.js'], dest: 'dist/js/jquery.prettyPhoto.js'},
-					//{expand: false, src: ['src/plugins/isotope-plugin/js/jquery.isotope.min.js'], dest: 'dist/js/jquery.isotope.min.js'},
 					{expand: false, src: ['src/plugins/isotope-plugin/js/isotope.pkgd.js'], dest: 'dist/js/jquery.isotope.min.js'},//New Isotope Ver2
+					{expand: false, src: ['src/plugins/isotope-plugin/js/packery-mode.pkgd.min.js'], dest: 'dist/js/packery-mode.pkgd.min.js'},
 					{expand: false, src: ['src/js/wow.min.js'], dest: 'dist/js/wow.min.js'},
 					{expand: false, src: ['src/js/modernizr.js'], dest: 'dist/js/modernizr.js'},
 					{expand: false, src: ['src/js/jquery.gmap.min.js'], dest: 'dist/js/jquery.gmap.min.js'},
@@ -194,6 +196,22 @@ module.exports = function(grunt) {
 					{expand: true, cwd: 'src/contact-form/', src: ['**'], dest: 'dist/contact-form/'}
 				],
 			},
+			favicons: {
+				files: [
+					{expand: false, src: ['src/favicon.ico'], dest: 'dist/favicon.ico'},
+					{expand: false, src: ['src/plugins/fancybox/source/fancybox_loading@2x.gif'], dest: 'dist/images/loading.gif'}
+				],
+			},
+			images: {
+				files: [
+					{
+						expand: true,
+						cwd: 'src/images/',
+						src: ['**'],
+						dest: 'dist/images/',
+					},
+				],
+			}
 		},
 
 		// Check CSS
@@ -205,7 +223,31 @@ module.exports = function(grunt) {
 			options: {
 				dest: 'build/seismic-csslint.xml'
 			}
+		},
+
+		// Minify HTML
+		'htmlmin': {
+			dist: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true,
+					maxLineLength: 500,
+					minifyJS: true
+				},
+				files: [
+					{
+						expand: true,
+						cwd: 'src/',
+						src: ['**/*.html'],
+						dest: 'dist/',
+					},
+				],
+			},
+		},
+
+		// Clean
+		'clean': {
+			dist: ['dist']
 		}
 	});
-
 };

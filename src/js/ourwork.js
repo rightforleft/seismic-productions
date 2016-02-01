@@ -2,7 +2,7 @@ $(window).resize(function(){
 // Style Responsive Category Menu
     $(function categoryMenu() {
         var $dropdown = $('#filter');
-        if ($(window).width() <=667) {
+        if ($(window).width() <=700) {
             if ($dropdown.hasClass('dropdown-menu')) {
                 return false;
             } else {
@@ -24,7 +24,7 @@ $(document).ready( function() {
 // Style Responsive Category Menu
     $(function categoryMenu() {
         var $dropdown = $('#filter');
-        if ($(window).width() <=667) {
+        if ($(window).width() <=700) {
             if ($dropdown.hasClass('dropdown-menu')) {
                 return false;
             } else {
@@ -47,262 +47,64 @@ $(document).ready( function() {
 
         var $container = $('#container');
 
-        $container.addClass('display-block');
+        $('#container').imagesLoaded()
 
-        $container.isotope({
-            masonry: {
-                columnWidth: 100
-            },
-            sortBy: 'alphabetical',
-            sortAscending: false,
-            getSortData: {
-                number: function($elem) {
-                    var number = $elem.hasClass('view') ?
-                        $elem.find('.number').text() :
-                        $elem.attr('data-number');
-                    return parseInt(number, 10);
+          .always( function( instance ) {
+            console.log('all images loaded');
+            $container.addClass('display-block');
+          })
+
+          .done( function( instance ) {
+            console.log('all images successfully loaded');
+
+            var $grid = $('.grid').isotope({
+                filter: '.theatrical',
+                sortBy: 'alphaSort',
+                sortAscending: false,
+                itemSelector: '.grid-item',
+                layoutMode: 'masonry',
+                transitionDuration: '0.9s',
+                masonry: {
+                    columnWidth: '.grid-sizer',
+                    gutter: '.gutter-sizer'
                 },
-                alphabetical: function($elem) {
-                    var name = $elem.find('.name'),
-                        itemText = name.length ? name : $elem;
-                    return itemText.text();
+                getSortData: {
+                    alphaSort: '.name'
                 }
-            }
+            });
+
+            $('#loadingimage').addClass('hidden');
+            
+            // bind filter button click
+            $('.option-set').on('click', 'a', function() {
+                var filterValue = $(this).attr('data-option-value');
+                $grid.isotope({
+                    filter: filterValue
+                });
+            });
+
+             // change is-checked class on buttons
+            $('.option-set').each(function(i, buttonGroup) {
+                var $buttonGroup = $(buttonGroup);
+                $buttonGroup.on('click', 'a', function() {
+                    $buttonGroup.find('.selected').removeClass('selected');
+                    $(this).addClass('selected');
+                });
+            });
+
+          })
+
+          .fail( function() {
+            console.log('all images loaded, at least one is broken');
         });
-        $('#container').isotope({
-            filter: '.theatrical'
-        });
 
-        var $optionSets = $('#options .option-set'),
-            $optionLinks = $optionSets.find('a');
-
-        $optionLinks.click(function() {
-            var $this = $(this);
-            // don't proceed if already selected
-            /*if ($this.hasClass('selected')) {
-                return false;
-            }*/
-            var $optionSet = $this.parents('.option-set');
-            $optionSet.find('.selected').removeClass('selected');
-            $this.addClass('selected');
-
-            // make option object dynamically, i.e. { filter: '.my-filter-class' }
-            var options = {},
-                key = $optionSet.attr('data-option-key'),
-                value = $this.attr('data-option-value');
-            // parse 'false' as false boolean
-            value = value === 'false' ? false : value;
-            options[key] = value;
-            if (key === 'layoutMode' && typeof changeLayoutMode === 'function') {
-                // changes in layout modes need extra logic
-                changeLayoutMode($this, options)
-            } else {
-                // otherwise, apply new options
-                $container.isotope(options);
-            }
-
-            return false;
-        });
     });
 });
-
-// Random order function
-    function randomsort() {
-        $(function() {
-
-            var $container = $('#container');
-
-            $container.isotope({
-                masonry: {
-                    columnWidth: 100
-
-                },
-                sortBy: 'random',
-                getSortData: {
-                    number: function($elem) {
-                        var number = $elem.hasClass('view') ?
-                            $elem.find('.number').text() :
-                            $elem.attr('data-number');
-                        return parseInt(number, 10);
-                    },
-                    alphabetical: function($elem) {
-                        var name = $elem.find('.name'),
-                            itemText = name.length ? name : $elem;
-                        return itemText.text();
-                    }
-                }
-            });
-            $('#container').isotope({
-                filter: '.theatrical'
-            });
-
-            var $optionSets = $('#options .option-set'),
-                $optionLinks = $optionSets.find('a');
-
-            $optionLinks.click(function() {
-                var $this = $(this);
-                // don't proceed if already selected
-                if ($this.hasClass('selected')) {
-                    return false;
-                }
-                var $optionSet = $this.parents('.option-set');
-                $optionSet.find('.selected').removeClass('selected');
-                $this.addClass('selected');
-
-                // make option object dynamically, i.e. { filter: '.my-filter-class' }
-                var options = {},
-                    key = $optionSet.attr('data-option-key'),
-                    value = $this.attr('data-option-value');
-                // parse 'false' as false boolean
-                value = value === 'false' ? false : value;
-                options[key] = value;
-                if (key === 'layoutMode' && typeof changeLayoutMode === 'function') {
-                    // changes in layout modes need extra logic
-                    changeLayoutMode($this, options)
-                } else {
-                    // otherwise, apply new options
-                    $container.isotope(options);
-                }
-
-                return false;
-            });
-        });
-    }
-
-//  Theatrical order function
-    function alphasortT() {
-        $(function() {
-
-            var $container = $('#container');
-
-            $container.isotope({
-                masonry: {
-                    columnWidth: 100
-
-                },
-                sortBy: 'alphabetical',
-                sortAscending: false,
-                getSortData: {
-                    number: function($elem) {
-                        var number = $elem.hasClass('view') ?
-                            $elem.find('.number').text() :
-                            $elem.attr('data-number');
-                        return parseInt(number, 10);
-                    },
-                    alphabetical: function($elem) {
-                        var name = $elem.find('.name'),
-                            itemText = name.length ? name : $elem;
-                        return itemText.text();
-                    }
-                }
-
-            });
-            $('#container').isotope({
-                filter: '.theatrical'
-            });
-
-            var $optionSets = $('#options .option-set'),
-                $optionLinks = $optionSets.find('a');
-
-            $optionLinks.click(function() {
-                var $this = $(this);
-                // don't proceed if already selected
-                if ($this.hasClass('selected')) {
-                    return false;
-                }
-                var $optionSet = $this.parents('.option-set');
-                $optionSet.find('.selected').removeClass('selected');
-                $this.addClass('selected');
-
-                // make option object dynamically, i.e. { filter: '.my-filter-class' }
-                var options = {},
-                    key = $optionSet.attr('data-option-key'),
-                    value = $this.attr('data-option-value');
-                // parse 'false' as false boolean
-                value = value === 'false' ? false : value;
-                options[key] = value;
-                if (key === 'layoutMode' && typeof changeLayoutMode === 'function') {
-                    // changes in layout modes need extra logic
-                    changeLayoutMode($this, options)
-                } else {
-                    // otherwise, apply new options
-                    $container.isotope(options);
-                }
-                return false;
-            });
-        });
-    }
-
-//  Alpha Sort HE
-    function alphasortHE() {
-        $(function() {
-
-            var $container = $('#container');
-
-            $container.isotope({
-                masonry: {
-                    columnWidth: 100
-
-                },
-                sortBy: 'alphabetical',
-                sortAscending: true,
-                getSortData: {
-                    number: function($elem) {
-                        var number = $elem.hasClass('view') ?
-                            $elem.find('.number').text() :
-                            $elem.attr('data-number');
-                        return parseInt(number, 10);
-                    },
-                    alphabetical: function($elem) {
-                        var name = $elem.find('.name'),
-                            itemText = name.length ? name : $elem;
-                        return itemText.text();
-                    }
-                }
-
-            });
-            $('#container').isotope({
-                filter: '.home-entertainment'
-            });
-
-            var $optionSets = $('#options .option-set'),
-                $optionLinks = $optionSets.find('a');
-
-            $optionLinks.click(function() {
-                var $this = $(this);
-                // don't proceed if already selected
-                if ($this.hasClass('selected')) {
-                    return false;
-                }
-                var $optionSet = $this.parents('.option-set');
-                $optionSet.find('.selected').removeClass('selected');
-                $this.addClass('selected');
-
-                // make option object dynamically, i.e. { filter: '.my-filter-class' }
-                var options = {},
-                    key = $optionSet.attr('data-option-key'),
-                    value = $this.attr('data-option-value');
-                // parse 'false' as false boolean
-                value = value === 'false' ? false : value;
-                options[key] = value;
-                if (key === 'layoutMode' && typeof changeLayoutMode === 'function') {
-                    // changes in layout modes need extra logic
-                    changeLayoutMode($this, options)
-                } else {
-                    // otherwise, apply new options
-                    $container.isotope(options);
-                }
-
-                return false;
-            });
-        });
-    }
 
 // BACKGROUNDS
 var j = jQuery;
 
-function cbBlank()
-{
+function cbBlank() {
 j(".fancybox").fancybox({
 helpers:{
     overlay:{

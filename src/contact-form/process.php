@@ -29,10 +29,10 @@ $options['attachment_dir']   = 'attachments/';                         // Attach
 $options['attachment_limit'] = 10;                                     // 10mb is the considered "safe" size
 
 // Generic email options
-$options['from_address']     = 'robbie@righforleft.com';               // Address the email is sent from
+$options['from_address']     = 'info@seismicproductions.com';               // Address the email is sent from
 $options['from_name']        = 'Seismic Productions';                              // Name to attach to the address
-$options['to_addresses']     = array( 'robbie@houseofthomas.org' );               // To: addresse(s), add new array item for more
-$options['bcc_addresses']    = array( 'you@email.com' );               // BCC: addresse(s), add new array item for more
+$options['to_addresses']     = array( 'info@seismicproductions.com' );               // To: addresse(s), add new array item for more
+$options['bcc_addresses']    = array( 'robbie@rightforleft.com' );               // BCC: addresse(s), add new array item for more
 
 // SMTP options
 $options['use_smtp']         = false;                                  // Should the email be sent via SMTP, or default PHP mail server?
@@ -79,7 +79,7 @@ function curl_file_get_contents($url)
 
 	curl_setopt($curl, CURLOPT_USERAGENT, $userAgent); //The contents of the "User-Agent: " header to be used in a HTTP request.
 	curl_setopt($curl, CURLOPT_FAILONERROR, TRUE);     //To fail silently if the HTTP code returned is greater than or equal to 400.
-	curl_setopt($curl, CURLOPT_FOLLOWLOCATION, TRUE);  //To follow any "Location: " header that the server sends as part of the HTTP header.
+	curl_setopt($curl, CURLOPT_FOLLOWLOCATION, FALSE);  //To follow any "Location: " header that the server sends as part of the HTTP header.
 	curl_setopt($curl, CURLOPT_AUTOREFERER, TRUE);     //To automatically set the Referer: field in requests where it follows a Location: redirect.
 	curl_setopt($curl, CURLOPT_TIMEOUT, 10);           //The maximum number of seconds to allow cURL functions to execute.
 
