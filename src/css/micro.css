@@ -1,0 +1,295 @@
+/* MICRO SITE CSS */
+@font-face {
+    font-family: 'Cicle_Semi';
+    src: url('../fonts/Cicle_Semi-webfont.eot');
+    src: url('../fonts/Cicle_Semi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cicle_Semi-webfont.woff') format('woff'),
+         url('../fonts/Cicle_Semi-webfont.ttf') format('truetype'),
+         url('../fonts/Cicle_Semi-webfont.svg#sofia_pro_lightregular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+body, h1, h2, h3, h4 {font-family: "Cicle_Semi"; letter-spacing: 0px;} /*Century Gothic W02*/
+#container1, #container2, #container3, 
+#container4, #container5, #container6, 
+#container7, #container8, #container9, 
+#container10, #container11, #container12 {
+   display:none;
+   overflow:hidden;
+}
+
+/* MENU DRAWER */
+#menudrawer{
+  position: absolute;
+  width:600px;
+  height:100%;
+  top:0;
+  left:0;
+  background-color: rgba(0,0,0,.7);
+  padding: 20px;
+  z-index: 100;
+}
+#menudrawer div.menu.sub {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background-color: #202324;
+	z-index: -1;
+	width: 500px;
+	border: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+#menudrawer div.menu {
+	height: 100%;
+	position: absolute;
+	border-right: 1px solid rgba(0,0,0,.35);
+}
+.video-nav {
+	width: 100%;
+	height: 50px;
+	margin-top: 5px;
+	padding:0;
+	background-image: -moz-linear-gradient(right, rgba(24,24,24,.7) 0%, rgba(40,40,40,.7) 100%);
+	background-image: -o-linear-gradient(right, rgba(24,24,24,.7) 0%, rgba(40,40,40,.7) 100%);
+	background-image: -webkit-gradient(linear, right top, left top, color-stop(0, rgba(24,24,24,.7)), color-stop(1, rgba(40,40,40,.7)));
+	background-image: -webkit-linear-gradient(right, rgba(24,24,24,.7) 0%, rgba(40,40,40,.7) 100%);
+	background-image: linear-gradient(to left, rgba(24,24,24,.7) 0%, rgba(40,40,40,.7) 100%);
+}
+.video-nav ul {text-align: center;padding:0;}
+.video-nav  li {
+	display: inline-block;
+	list-style-type: none;
+	padding-right: 12px;
+	padding-left: 12px;
+	text-transform: uppercase;
+}
+.video-nav a, .microclip a {
+	color: #ff5428;
+	-webkit-transition: color 0.1s ease-in;
+	text-decoration: none;
+}
+.video-nav li.active, .video-nav a:hover, .microclip a:active, .microclip a:hover {color: #acaaaa;}
+.video-nav h4 {font-size: 20px;margin: 6px 0;line-height:30pt;}
+
+
+#microsite {
+  position:fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+  background-color:#333;
+  top:0px;
+  left:0px;
+  z-index:-1;
+  background-color:#000;
+}
+
+#microplayer .sp-video {
+  margin-bottom: 0;
+}
+.sp-video {
+  text-align: center;background-color:#000;
+}
+#player {
+  width: 100%;
+}
+#production-title {
+  position: relative;
+  float:right;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size:contain;
+  width: 45%;
+  height: 90px;
+  margin-left:0;
+  margin-right:10px;
+  top:8px;
+}
+
+#production-title {
+  background-image: url('../images/no-good-deed-logo.png');
+}
+
+#micro-logo {
+	position: relative;
+	width: 100%;
+	height:auto;
+	text-align:center;
+	z-index: 10;
+	background-color: rgba(0,0,0,.7);
+}
+
+#micro-logo img {
+  width: 230px;
+}
+  
+#micro-title {
+  position: relative;
+  width: auto;
+  font-size: 20pt;
+  clear:both;
+}
+
+#micro-title h1 {
+  color: #fff !important;
+  margin-bottom: 0 !important;
+  line-height:60px;
+}
+
+#microsite .sp-video {top: 15px;position: relative;}
+  
+#microthumbs {
+	/*background: rgba(0,0,0,.5);*/
+	border: none;
+	width: 100%;
+  margin-bottom:40px;
+	min-width: 960px;
+	padding: 0px;
+	vertical-align:middle;
+	display: inline-block;
+}
+
+#microplayer {
+	background: rgba(0,0,0,.5);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 3px solid #3d3d3d;
+	width: 960px;
+	min-width: 960px;
+	padding: 5px;
+	vertical-align:middle;
+	display: inline-block;
+}
+
+#microplayer, #microthumbs {min-height:560px;}
+#micro-nav img{width: 316px;margin: 0px;}
+#micro-nav {
+}
+  
+#micro-nav .w80 {width: 80%}
+#micro-nav .w70 {width: 70%}
+#micro-nav .w100 {width: 100%}
+
+.microclip {
+  text-transform: uppercase;
+  text-align:center;
+  display: inline-block;
+}
+
+.microclip a{display:inline;}
+
+.microclip h4 {
+  font-size: 14pt;
+  line-height: 20pt;
+  background-color: rgba(0,0,0,.5);
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /*width:95%;
+  margin-left: 5px;*/
+}
+  
+
+
+#microplayer .closebutton {
+	position:absolute;
+	width:50px;
+	margin-top: 10px;
+	margin-left: 910px;
+}
+
+#player {
+  height: 484px;
+  width: 100%;
+}
+
+iframe, .fallback {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#portfolio {
+  width:100%;
+}
+.portfolio-item {
+  padding-left:0 !important;
+  padding-right:0!important;
+}
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.row {margin-right:0 !important;margin-left:0!important;}
+
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+<!--/*TABLET + --------------------------*/-->
+@media only screen and (min-width: 961px) {
+  #micro-title h1 {font-size: 28pt;}
+}
+  
+<!--/*TABLET-----------------------------*/-->
+@media only screen and (min-width: 481px) and (max-width: 960px) {
+  #micro-title h1 {font-size: 22pt;}
+  #micro-nav {width: 100%;}
+  #player {height: 380px;}
+  #microplayer, #microthumbs {width: 90%;}
+}
+  
+<!--/*PHONE-----------------------------*/-->
+@media (min-width: 300px) and (max-width: 480px) {
+  #micro-title h1 {font-size: 16pt;}
+  .microclip h4 {font-size: 8pt;}
+  #microplayer, #microthumbs {width: 304px;}
+  #micro-nav img {width: 130px;}
+  #micro-nav {width: 100%;padding: 2px;}
+  #player {height: 180px;}
+  #micro-logo, #microplayer .sp-video #production-title {height: 40px;}
+}
+
+#spot-titles {width:100%;}
+

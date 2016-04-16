@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>jQuery NiceScroll Test 3 - DOJO</title><style type="text/css">
+#boxscroll {
+	padding: 0px;
+	height: 450px;
+	width: 420px;
+	border: 2px solid #0000FF;
+	overflow: auto;
+	margin: 0px;
+}
+.tabtest {
+}
+.row {
+	background-color: #FFFFCC;
+}
+.row2 {
+	background-color: #66CCFF;
+}
+#boxscroll2 {
+	padding: 0px;
+	height: 450px;
+	width: 420px;
+	border: 2px solid #FF0000;
+	overflow: auto;
+	margin: 0px;
+}
+div:focus {
+   outline: none;
+   ie-dummy: expression(this.hideFocus=true);
+}
+
+.mush {
+  width:4960px;
+  height:450px;
+  background-image:url(img/mariomushrooms.png);
+}
+
+.bgm {
+  background-image:url(img/mariomushrooms2.png);
+}
+
+body {
+  font-family: georgia,serif;
+}
+
+.header {
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.9);
+}
+</style><script src="js/jquery.min.js"></script><script src="js/jquery.nicescroll.js"></script><script src="ext/iphone-style-checkboxes.js" type="text/javascript"></script><link rel="stylesheet" href="ext/iphone-style-checkboxes.css" type="text/css" media="screen"><script>
+function initScroll(){var o=$("#nctouch").prop("checked");nice1&&nice1.remove(),nice1=$("#boxscroll").niceScroll({touchbehavior:o,cursorcolor:"#0000FF",cursoropacitymax:.6,cursorwidth:8,horizrailenabled:!0}),$("#ncver").html(nice1.version),$("#boxscroll").scroll(function(o){if(off){var l=$("#boxscroll").scrollLeft()-off.left,c=$("#boxscroll").scrollTop()-off.top;body.style.backgroundPosition=-l+"px "+-c+"px",$("#infoscroll1").html($("#boxscroll").scrollLeft()+"x"+$("#boxscroll").scrollTop())}}),$("#boxscroll").scroll(),nice2&&nice2.remove(),nice2=$("#boxscroll2").niceScroll("#boxscroll2 div.mush",{touchbehavior:o,cursorcolor:"#FF0000",cursoropacitymax:.6,cursorwidth:8,horizrailenabled:!0}),$("#boxscroll2").scroll(function(o){var l=$(this);$("#infoscroll2").html(l.scrollLeft()+"x"+l.scrollTop())})}function getScroll(o){$(o).scrollTop(Math.floor(3e3*Math.random()))}function getScroll2D(o){$(o).getNiceScroll().doScrollPos(Math.floor(4e3*Math.random()),Math.floor(4e3*Math.random()),150)}var nice1,nice2,body,off;$(window).load(function(){off=$("#boxscroll").position(),off.top+=2,off.left+=2,$("#boxscroll").scroll()}),$(document).ready(function(){body=document.getElementsByTagName("body")[0],$("body").niceScroll({cursoropacitymax:.8,cursorwidth:8}),$("#nctouch").iphoneStyle().change(function(){initScroll()}),initScroll()});
+</script><meta name="viewport" content="user-scalable=no"></head><body class="bgm"><div style="height:120px" class="header"><h2>NICESCROLL - SCROLLING TEST</h2><div>TEST PAGE - Nicescroll version: <span id="ncver"></span></div><table border="0" cellspacing="0" cellpadding="4"><tr><td>Enable touchbehavior option:</td><td><input type="checkbox" id="nctouch"></td></tr></table></div><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td>NATIVE (simple div with overflow:auto) <span
+ id="infoscroll1"></span></td><td>HWSCROLL (div+wrapper) <span id="infoscroll2"></span></td></tr><tr><td align="left" valign="top"><div id="boxscroll"><div class="mush"></div></div></td><td align="left" valign="top"><div id="boxscroll2"><div class="mush"></div></div></td></tr><tr><td align="left" valign="top"><input type="button" value="GET SCROLL!" onclick="getScroll(&quot;#boxscroll&quot;)">&nbsp;<input type="button" value="GET SCROLL2D!" onclick="getScroll2D(&quot;#boxscroll&quot;)"></td><td
+ align="left" valign="top"><input type="button" value="GET SCROLL!" onclick="getScroll(&quot;#boxscroll2&quot;)">&nbsp;<input type="button" value="GET SCROLL2D!" onclick="getScroll2D(&quot;#boxscroll2&quot;)"></td></tr></table><p>&nbsp;</p><input type="button" value="HIDE ALL!" onclick="$(&quot;:nicescroll&quot;).getNiceScroll().hide()">&nbsp;<input type="button" value="SHOW ALL!" onclick="$(&quot;:nicescroll&quot;).getNiceScroll().show()"></body></html>

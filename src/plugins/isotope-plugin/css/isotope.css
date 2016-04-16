@@ -1,0 +1,202 @@
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 1;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+    -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+            transition-property: top, left, border-radius;
+  transition-duration: 2s, 1s, 0.5s, 0.5s;
+  transition-delay: 0s, 0.5s, 1s, 1.5s;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+/* 3 columns, percentage width */
+#container.grid {
+  margin-left: 16%;
+  margin-right: 16%;
+  margin-top: 10px;
+  max-width: 1080px;
+}
+.grid-item,
+.grid-sizer {
+  height: auto;
+  max-height: 177px;
+  max-width: 283px;
+  min-width: 140px;
+  width: 32%;
+}
+
+.grid-item {
+  float: left;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.grid-item img {
+  height: auto;
+}
+
+.grid-item.grid-item--width2 { 
+  height: auto;
+  margin-bottom: 10px;
+  min-width: 284px;
+  max-height: 362px;
+  max-width: 576px;
+  width: 65%; 
+}
+
+.gutter-sizer {
+  width: 1%;
+}
+
+.grid-item .mask {
+     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   background-color: rgba(255,255,255, 0.6);
+   -webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+}
+.grid-item:hover .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+.grid-item .mask,
+.grid-item .content {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.grid-item h2 {
+  background: rgba(0, 0, 0, 0.8);
+  bottom:-117px;
+  color: #fff;
+  display: none;
+  font-family: Cicle_Gordita, serif;
+  font-size: 17px;
+  height:25px;
+  margin: 20px 0 0 0;
+  padding: 20px 17px 17px 17px !important;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align:bottom !important; 
+}
+.grid-item p {
+   font-family: Cicle_Semi, serif;
+   font-style: italic;
+   font-size: 12px;
+   position: relative;
+   color: #fff;
+   padding: 10px 20px 20px;
+   text-align: right;
+   bottom:-33px;
+   display:none;
+}
+.grid-item a.info {
+   display: inline;
+   text-decoration: none;
+   /*background: #000;*/
+   color: #fff;
+   text-transform: uppercase;
+}
+.grid-item a.info: hover {
+   /*-webkit-box-shadow: 0 0 5px #000;
+   -moz-box-shadow: 0 0 5px #000;
+   box-shadow: 0 0 5px #000;*/
+}
+
+.grid-item .watch{
+  position:relative !important;
+  visibility:visible;
+}
+
+.grid-item .watch img{
+  width:50%;
+  height:50%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.grid-item .preview {
+  width: 100%;
+}
+.grid-item .preview img{
+  display: block;
+  height:40%;
+  margin: 12% auto;
+  opacity:.8;
+  width:40%;
+}
+
+.grid-item.grid-item--width2 .preview img {
+  height: 30%;
+  margin: 17% auto;
+  width: 30%;
+}
+
