@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
 	// Default task(s)
 	grunt.registerTask('default', ['cleanup','htmlmin:dist','concat:css', 'concat:cssResponsive', 'cssmin', 'copy:css', 'copy:fancyboxImages', 'copy:fonts','concat:jsFancyBox', 'concat:jsOffCanvasMenu', 'copy:js', 'copy:contactForm', 'copy:favicons','copy:images','uglify']);
+	grunt.registerTask('tweaks', ['htmlmin:dist','concat:css', 'concat:cssResponsive', 'cssmin', 'copy:css', 'copy:fonts','concat:jsFancyBox', 'concat:jsOffCanvasMenu', 'copy:js','uglify']);
 	grunt.registerTask('css', ['concat:css', 'concat:cssResponsive', 'cssmin', 'copy:css', 'copy:fancyboxImages']);
 	grunt.registerTask('fonts', ['copy:fonts']);
 	grunt.registerTask('checkcss', ['csslint']);
@@ -98,7 +99,8 @@ module.exports = function(grunt) {
 			style: {
 				files: {
 					'dist/css/seismic-style.min.css': [
-					'src/css/style.css'
+					'src/css/style.css',
+					'src/css/images.css'
 					]
 				}
 			}
