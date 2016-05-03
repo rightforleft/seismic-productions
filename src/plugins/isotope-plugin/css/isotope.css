@@ -78,8 +78,8 @@
 .grid-item,
 .grid-sizer {
   height: auto;
-  max-height: 177px;
-  max-width: 283px;
+  max-height: 176px;
+  max-width: 285px;
   min-width: 140px;
   width: 32%;
 }
@@ -99,8 +99,8 @@
   margin-bottom: 10px;
   min-width: 284px;
   max-height: 362px;
-  max-width: 576px;
-  width: 65%; 
+  max-width: 582px;
+  width: 67%; 
 }
 
 .gutter-sizer {

@@ -382,7 +382,7 @@ body .rt-mainrow [class*="rt-pull"] {
 		width: 2.5%;
 	}
 	.grid-item.grid-item--width2 { 
-		width: 99%;
+		width: 100%;
 	}
 	.display-work-wrap {
 		margin: 0 10px 0;
@@ -499,7 +499,7 @@ body .rt-mainrow [class*="rt-pull"] {
 }
 @media (min-width: 938px) and (max-width: 1080px){
 	#container.grid {
-		margin-left: 5%;
-		margin-right: 5%;
+		margin-left: 4%;
+		margin-right: 4%;
 	}
 }
