@@ -113,11 +113,11 @@ module.exports = function(grunt) {
 					'dist/js/fancybox.min.js': ['build/js/fancybox.js']
 				}
 			},
-			/*offCanvasMenu: {
+			offCanvasMenu: {
 				files: {
 					'dist/js/offCanvasMenu.min.js': ['build/js/offCanvasMenu.js']
 				}
-			},*/
+			},
 			seismicPost: {
 				files: {
 					'dist/js/seismicPost.min.js': ['build/js/seismicPost.js']

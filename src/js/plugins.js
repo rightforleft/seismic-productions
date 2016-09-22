@@ -1,4 +1,4 @@
-( function( window ) {
+(function( window ) {
 
 'use strict';
 
@@ -15,20 +15,20 @@
   })();
 
 // Show Search
-    $(function(){
-        $(".vc_menu-search").on("click", function(){
-            if ($(this).width(35)) {
-                $(this).animate({"width":"280px"});
-                $(this).animate({"height":"auto"});
-                document.getElementById('googleSearch').style.display = "block";
-            }
-            else {
-                $(this).animate({"width":"35px"});
-                $(this).animate({"height":"25px"});
-                document.getElementById('googleSearch').style.display = "none";
-            }
-        });
-    });
+  $(function(){
+      $(".vc_menu-search").on("click", function(){
+          if ($(this).width(35)) {
+              $(this).animate({"width":"280px"});
+              $(this).animate({"height":"auto"});
+              document.getElementById('googleSearch').style.display = "block";
+          }
+          else {
+              $(this).animate({"width":"35px"});
+              $(this).animate({"height":"25px"});
+              document.getElementById('googleSearch').style.display = "none";
+          }
+      });
+  });
 
 
 // Create Fancybox 
@@ -76,30 +76,32 @@ J(document).ready(function() {
     }
 
     // Contact Us Map
-    J('#map-small').gMap({
-     address: '7010 Sana Monica Blvd, Los Angeles, CA',
-     mapTypeId: 'ROADMAP',
-     zoom: 14,
-     markers: [
-      {
-        address: "7010 Sana Monica Blvd, Los Angeles, CA",
-        icon: {
-          image: "images/blue.png",
-          iconsize: [42, 51],
-          iconanchor: [21,51]
-        }             
-      }
-     ],
-     doubleclickzoom: true,
-     controls: {
-       panControl: true,
-       zoomControl: true,
-       mapTypeControl: false,
-       scaleControl: true,
-       streetViewControl: true,
-       overviewMapControl: false
-     },            
-  });
+    if (J(".contactUs").length) {
+      J('#map-small').gMap({
+         address: '7010 Sana Monica Blvd, Los Angeles, CA',
+         mapTypeId: 'ROADMAP',
+         zoom: 14,
+         markers: [
+          {
+            address: "7010 Sana Monica Blvd, Los Angeles, CA",
+            icon: {
+              image: "images/blue.png",
+              iconsize: [42, 51],
+              iconanchor: [21,51]
+            }             
+          }
+         ],
+         doubleclickzoom: true,
+         controls: {
+           panControl: true,
+           zoomControl: true,
+           mapTypeControl: false,
+           scaleControl: true,
+           streetViewControl: true,
+           overviewMapControl: false
+         },            
+      });
+    }
 });
 
 
@@ -185,7 +187,7 @@ if ( typeof define === 'function' && define.amd ) {
 			closebtn.addEventListener( 'click', toggleMenu );
 		}
 
-		// close the menu element if the target it´s not the menu element or one of its descendants..
+		// close the menu element if the target itÂ´s not the menu element or one of its descendants..
 		content.addEventListener( 'click', function(ev) {
 			var target = ev.target;
 			if( isOpen && target !== openbtn ) {
