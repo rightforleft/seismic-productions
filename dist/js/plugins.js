@@ -18,11 +18,10 @@
   $(function(){
       $(".vc_menu-search").on("click", function(){
           if ($(this).width(35)) {
-              $(this).animate({"width":"280px"});
+              $(this).animate({"width":"500px"});
               $(this).animate({"height":"auto"});
               document.getElementById('googleSearch').style.display = "block";
-          }
-          else {
+          } else {
               $(this).animate({"width":"35px"});
               $(this).animate({"height":"25px"});
               document.getElementById('googleSearch').style.display = "none";

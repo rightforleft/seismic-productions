@@ -351,20 +351,18 @@ body .rt-mainrow [class*="rt-pull"] {
 		margin-left: 0;
 		top: 0;
 	}
-	header .logo .animated-rings {
-		left: -1em;
-		top: -5em;
-	}
 }
 
 /* iPhone5 ====================================== */
 	@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-		header .header-left-column img {
-			width: 100%;
-		}
 		header {
 			border-bottom: 1px solid #888;
 			margin-bottom: 0;
+		}
+		header .logo img {
+			top: -3em;
+		    	left: -5em;
+		    	width: 150%;
 		}
 		footer {
 			height: auto;
@@ -413,13 +411,15 @@ body .rt-mainrow [class*="rt-pull"] {
 
 /* iPhone6 PORTRAIT ==============================*/
 	@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-		header .header-left-column img {
-			width: 100%;
-		}
 		header {
 			border-bottom: 1px solid #888;
 			margin-bottom: 0;
 		}
+		header .logo img {
+			top: -4em;
+		    	left: -6em;
+		    	width: 150%;
+		}		
 		footer {
 			height: auto;
 			line-height: 1em;
@@ -456,7 +456,11 @@ body .rt-mainrow [class*="rt-pull"] {
 
 /* iPhone6 & 6Plus PORTRAIT ======================*/
 	@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
-
+		header .logo img {
+			top: -5em;
+		    	left: -7em;
+		    	width: 150%;
+		}
 	}
 
 /* iPHONE 6 & 6Plus Landscape =================== */
@@ -465,8 +469,10 @@ body .rt-mainrow [class*="rt-pull"] {
 			border-bottom: 1px solid #888;
 			margin-bottom: 0;
 		}
-		header .header-left-column img {
-			width: 100%;
+		header .logo img {
+		    top: -7em;
+		    left: 0;
+		    width: 100%;
 		}
 		footer {
 			height: auto;
@@ -499,7 +505,10 @@ body .rt-mainrow [class*="rt-pull"] {
 
 /* iPhone5 Landscape =============================*/
 	@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
-
+		header .logo img {
+			top: -4em;
+		    	left: -4em;
+		}
 	}
 
 /* TABLET ======================================= */
@@ -519,7 +528,9 @@ body .rt-mainrow [class*="rt-pull"] {
 		}
 	}
 	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-
+		header .logo img {
+			top: -8em;
+		}
 	}
 	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 

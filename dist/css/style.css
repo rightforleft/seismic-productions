@@ -249,20 +249,17 @@ header .logo img {
     display: block;
     position: absolute;
     left: 0;
-    margin-left: 7%;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 600px;
+    max-width: 1000px;
     right: 0;
-    top: -5em;
+    top: -12em;
     width: 100%
+}
+header .logo img.large-rings {
+    z-index: -1;
 }
 
 header .logo .animated-rings {
     animation: pulse 4s linear infinite;
-    left: -1.6em;
-    top: -13.5em;
 }
 /* ANIMATION */
   .rl_anim .rl_hover,
@@ -334,13 +331,13 @@ header .row {
 
 .header-right-column{
 	float: right;
-	width: 300px;
+	width: 420px;
 	height: auto;
 }
 
 .search-box{
 	float: left;
-	width: 180px;
+	width: 280px;
 	margin-top: 20px;
 }
 
@@ -479,7 +476,7 @@ nav {
 
 .nav-wrap ul li a.current:hover {
 	color: #2571a2;
-	background-color: rgba(0,0,0,0);
+	background-color: #fff;
 }
 
 .display-work-wrap ul li a.selected {
@@ -514,6 +511,10 @@ button:focus {
 }
 .contact-body.about {
 	height: 0;
+}
+.contact-box p {
+	font-size: 0.9em;
+	text-shadow: 2px 2px 5px rgba(0,0,0,.3);
 }
 
 .pageHead h2{
@@ -935,7 +936,7 @@ input[type="checkbox"] {
 
 #address-container,
 #map-container{
-	background-color: #000;
+	background-color: #333;
 	width: 100%;
 	float: right;
 	height: 304px;
@@ -1077,12 +1078,9 @@ footer {
 
 #player {
 	width: 860px;
-	height: 440px;
-	margin-bottom: 40px;
+	height: 480px;
+	margin-bottom: 10px;
 	frameborder:0;
-}
-.player .video-wrapper {
-	background: #fff !important;
 }
 
 /*Video Sub Navigation*/
@@ -1090,9 +1088,9 @@ footer {
 	background: #2571a2;
 	font-family: "Cicle_Semi";
 	height: 36px;
-	margin-top:10px;
-	position:absolute;
-	width:100%;
+	margin-top: 10px;
+	position: relative;
+	width: 100%;
 }
 
 #video-nav ul {
@@ -1132,14 +1130,14 @@ footer {
 	font-size: 10px;
 }
 .overlay {
-  z-index: -999;
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
+	z-index: -999;
+	min-height: 100%;
+	min-width: 1024px;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 .overlayImg {

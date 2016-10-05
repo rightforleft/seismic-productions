@@ -32,16 +32,6 @@
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: 'open_sansregular';
-    src: url('../fonts/opensans-semibold-webfont.eot');
-    src: url('../fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/opensans-semibold-webfont.woff') format('woff'),
-         url('../fonts/opensans-semibold-webfont.ttf') format('truetype'),
-		 url('../fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-}
 @font-face{
 	font-family:'Glyphicons Halflings';
 	src:url('../fonts/glyphicons-halflings-regular.eot');
@@ -64,20 +54,6 @@
   src: url('../fonts/25F5A1_0_0.eot?#iefix') format('embedded-opentype'),
   url('../fonts/25F5A1_0_0.woff') format('woff'),
   url('../fonts/25F5A1_0_0.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'ProximaNovaA-Regular';
-  src: url('../fonts/25F5A1_1_0.eot');
-  src: url('../fonts/25F5A1_1_0.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/25F5A1_1_0.woff') format('woff'),
-  url('../fonts/25F5A1_1_0.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'ProximaNova-Regular';
-  src: url('../fonts/25F5A1_2_0.eot');
-  src: url('../fonts/25F5A1_2_0.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/25F5A1_2_0.woff') format('woff'),
-  url('../fonts/25F5A1_2_0.ttf') format('truetype');
 }
  
 /*SOFIA-------------------------------------------------------------*/
@@ -111,15 +87,5 @@
          url('../fonts/Cicle_Gordita-webfont.ttf') format('truetype'),
          url('../fonts/Cicle_Gordita-webfont.svg#sofia_pro_lightregular') format('svg');
     font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Cicle_Semi';
-    src: url('../fonts/Cicle_Semi-webfont.eot');
-    src: url('../fonts/Cicle_Semi-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Cicle_Semi-webfont.woff') format('woff'),
-         url('../fonts/Cicle_Semi-webfont.ttf') format('truetype'),
-         url('../fonts/Cicle_Semi-webfont.svg#sofia_pro_lightregular') format('svg');
-    font-weight: bold;
     font-style: normal;
 }
