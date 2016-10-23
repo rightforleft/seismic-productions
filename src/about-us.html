@@ -17,11 +17,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="transparent">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="transparent">
 
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
@@ -47,7 +59,7 @@
 </head>
 
 <body data-smooth-scrolling="1" class="home-body contact-body about"> 
-<div class="container seismic-team-container">
+<div class="container seismic-about-container">
 
     <!-- MOBILE NAV -->
         <div class="menu-wrap">
@@ -74,19 +86,23 @@
 
     <div class="content-wrap">  
         <div class="content">
-        <!-- HEADER -->
             <header>
                 <div class="header-wrap">
                     <div class="header-left-column">
-                        <img src="images/seismic-logo.png" alt="seismic logo"/>
+                        <div class="logo">
+                            <img src="images/seismic-logo.png" class="animated slow fadeIn" />
+                            <img src="images/seismic-rings.png" class="animated-rings" />
+                            <img src="images/seismic-rings-large.png" class="large-rings" />
+                        </div>
                         <button class="menu-button visible-xs" id="open-button"><i class="fa fa-bars"></i></button>
                     </div>
                     <div class="header-right-column hidden-xs">
-                        <!-- Search Box -->
-                        <div class="search-box">
-                            <div class="vc_menu-search-wrapper pull-right">
-                                <div class="vc_menu-search">
-                                    <div class="search-button"></div>
+                    
+                    <!-- Search Box -->
+                    <div class="search-box">
+                        <div class="vc_menu-search-wrapper pull-right">
+                            <div class="vc_menu-search">
+                                <div class="search-button"></div>
                                     <div id="googleSearch">
                                         <gcse:searchbox-only resultsURL="results.html"></gcse:searchbox-only>
                                     </div>
@@ -114,14 +130,19 @@
                     </ul>
                 </div>
             </nav>  
+ 
         
             <!-- CONTENT -->
             <div class="about-us">
                 <div class="content-wrap">
-                    <aside class="quarter-left">
-                        <p><span>Seismic Productions</span> is an award-winning creative marketing company providing strategy and innovative content to the entertainment industry. For over 20 years, we have been delivering groundbreaking campaigns to the major studios and independent film distributors, as well as network and cable television. From concepts to copy, from motion graphics to editorial, our multi-disciplinary staff is uniquely poised to face the challenges of a rapidly changing marketplace. Under the direction of owners David Schneiderman and Erin Wyatt, the Seismic team is passionately committed to bringing the best ideas, strongest execution, and highest creative standards in the entertainment industry.</p>
-                    </aside>
+                    <div class="center">
+                        <p>Under the direction of owners <span>Erin Wyatt</span> and <span>David Schneiderman,</span>our Seismic team is passionately commited to bringing the best ideas, strongest execution and highest creative standards to the industry.</p>
+                        <p>Our expertise in the constantly evolving world of content-driven entertainment allows us to collaborate with our clients to refine creative ideas into award-winning work.</p>
+                    </div>
                 </div>
+            </div>
+            <div class="owners">
+                <img src="images/owners.png" />
             </div>
 
             <!-- FOOTER -->

@@ -144,6 +144,8 @@ module.exports = function(grunt) {
 					{expand: false, src: ['src/plugins/isotope-plugin/js/isotope.pkgd.js'], dest: 'dist/js/jquery.isotope.min.js'},//New Isotope Ver2
 					{expand: false, src: ['src/plugins/isotope-plugin/js/packery-mode.pkgd.min.js'], dest: 'dist/js/packery-mode.pkgd.min.js'},
 					{expand: false, src: ['src/js/wow.min.js'], dest: 'dist/js/wow.min.js'},
+					{expand: false, src: ['src/plugins/off-canvas-menu/js/classie.js'], dest: 'dist/js/classie.js'},
+					{expand: false, src: ['src/plugins/off-canvas-menu/js/main4.js'], dest: 'dist/js/main4.js'},
 					{expand: false, src: ['src/js/modernizr.js'], dest: 'dist/js/modernizr.js'},
 					{expand: false, src: ['src/js/jquery.gmap.min.js'], dest: 'dist/js/jquery.gmap.min.js'},
 					{expand: false, src: ['src/plugins/jquery.nicescroll.3/jquery.nicescroll.min.js'], dest: 'dist/js/jquery.nicescroll.min.js'},

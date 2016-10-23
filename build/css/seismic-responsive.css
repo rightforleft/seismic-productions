@@ -345,152 +345,205 @@ body .rt-mainrow [class*="rt-pull"] {
 	left: auto;
 }
 
-@media (max-width: 374px){
-	header .header-left-column img {
-		width: 100%;
+/* Mobile - General */
+@media only screen and (min-device-width: 320px) and (max-device-width: 667px) {
+	header .logo img {
+		margin-left: 0;
+		top: 0;
 	}
-	header {
-		border-bottom: 1px solid #888;
-		margin-bottom: 0;
-	}
-	footer {
-		height: auto;
-		line-height: 1em;
-		padding: 5px;
-		text-align: center;
-	}
-	.container-fluid.marginb60 {
-		margin-bottom: 40px !important;
-	}
-	.vc_hover img {
-		height: 86px;
-		margin-top: 4%;
-		width: 86px;
-	}
-	.content-wrap aside.quarter-left {
+	.about-us .content-wrap {
 		margin-top: 0;
 		width: 100%;
 	}
-	.grid-item {
-		margin-bottom: 6px;
-	}
-	.grid-item,
-	.grid-sizer {
-		width: 48%;
-	}
-	.gutter-sizer {
-		width: 2.5%;
-	}
-	.grid-item.grid-item--width2 { 
-		width: 100%;
-	}
-	.display-work-wrap {
-		margin: 0 10px 0;
-		width: 95%;
-	}
-	.isotope {
-		margin-left: 3%;
-	}
 }
 
-@media (min-width: 375px) and (max-width: 627px){
-	header .header-left-column img {
-		width: 100%;
+/* iPhone5 ====================================== */
+	@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+		header {
+			border-bottom: 1px solid #888;
+			margin-bottom: 0;
+		}
+		header .logo img {
+			top: -3em;
+		    	left: -5em;
+		    	width: 150%;
+		}
+		footer {
+			height: auto;
+			line-height: 1em;
+			padding: 5px;
+			text-align: center;
+		}
+		.container-fluid.marginb60 {
+			margin-bottom: 40px !important;
+		}
+		.vc_hover img {
+			height: 86px;
+			margin-top: 4%;
+			width: 86px;
+		}
+		.content-wrap aside.quarter-left {
+			margin-top: 0;
+			width: 100%;
+		}
+		.grid-item {
+			margin-bottom: 6px;
+		}
+		.grid-item,
+		.grid-sizer {
+			width: 48%;
+		}
+		.gutter-sizer {
+			width: 2.5%;
+		}
+		.grid-item.grid-item--width2 { 
+			width: 100%;
+		}
+		.display-work-wrap {
+			margin: 0 10px 0;
+			width: 95%;
+		}
+		.isotope {
+			margin-left: 3%;
+		}
 	}
-	header {
-		border-bottom: 1px solid #888;
-		margin-bottom: 0;
-	}
-	footer {
-		height: auto;
-		line-height: 1em;
-		padding: 5px;
-		text-align: center;
-	}
-	.container-fluid.marginb60 {
-		margin-bottom: 40px !important;
-	}
-	.vc_hover img {
-		height: 86px;
-		margin-top: 4%;
-		width: 86px;
-	}
-	.content-wrap aside.quarter-left {
-		margin-top: 0;
-		width: 100%;
-	}
-	.display-work-wrap {
-		margin: 0 10px 0;
-		width: 95%;
-	}
-	.grid-item,
-	.grid-sizer {
-		width: 48%;
-	}
-	.gutter-sizer {
-		width: 3%;
-	}
-	.grid-item.grid-item--width2 { 
-		width: 99%;
-	}
-}
 
-@media (min-width: 628px) and (max-width: 767px) {
-	header {
-		border-bottom: 1px solid #888;
-		margin-bottom: 0;
+/* Galaxy Nexus Landscape ========================*/
+	@media only screen and (min-device-width: 360px) and (max-device-width: 640px) and (orientation: portrait) {
+
+	}  
+
+/* iPhone6 PORTRAIT ==============================*/
+	@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+		header {
+			border-bottom: 1px solid #888;
+			margin-bottom: 0;
+		}
+		header .logo img {
+			top: -4em;
+		    	left: -6em;
+		    	width: 150%;
+		}		
+		footer {
+			height: auto;
+			line-height: 1em;
+			padding: 5px;
+			text-align: center;
+		}
+		.container-fluid.marginb60 {
+			margin-bottom: 40px !important;
+		}
+		.vc_hover img {
+			height: 86px;
+			margin-top: 4%;
+			width: 86px;
+		}
+		.content-wrap aside.quarter-left {
+			margin-top: 0;
+			width: 100%;
+		}
+		.display-work-wrap {
+			margin: 0 10px 0;
+			width: 95%;
+		}
+		.grid-item,
+		.grid-sizer {
+			width: 48%;
+		}
+		.gutter-sizer {
+			width: 3%;
+		}
+		.grid-item.grid-item--width2 { 
+			width: 99%;
+		}
 	}
-	header .header-left-column img {
-		width: 100%;
+
+/* iPhone6 & 6Plus PORTRAIT ======================*/
+	@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+		header .logo img {
+			top: -5em;
+		    	left: -7em;
+		    	width: 150%;
+		}
 	}
-	footer {
-		height: auto;
-		line-height: 1em;
+
+/* iPHONE 6 & 6Plus Landscape =================== */
+	@media only screen and (min-device-width : 375px) and (max-device-width : 736px) and (orientation : landscape) { 
+		header {
+			border-bottom: 1px solid #888;
+			margin-bottom: 0;
+		}
+		header .logo img {
+		    top: -7em;
+		    left: 0;
+		    width: 100%;
+		}
+		footer {
+			height: auto;
+			line-height: 1em;
+		}
+		.close-button {
+			font-size: 0.7em;
+			min-width: 50px;
+			padding: 5px;
+		}
+		.icon-list {
+			padding: 0;
+		}
+		.container-fluid.marginb60 {
+			margin-bottom: 40px !important;
+		}
+		.vc_hover img {
+			height: 104px;
+			margin-top: 12%;
+			width: 104px;
+		}
+		.content-wrap aside.quarter-left {
+			width: 50%;
+		}
+		.display-work-wrap {
+			margin: 0 10px 0;
+			width: 95%;
+		}
 	}
-	.close-button {
-		font-size: 0.7em;
-		min-width: 50px;
-		padding: 5px;
+
+/* iPhone5 Landscape =============================*/
+	@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+		header .logo img {
+			top: -4em;
+		    	left: -4em;
+		}
 	}
-	.icon-list {
-		padding: 0;
+
+/* TABLET ======================================= */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+		header {
+			padding: 0 15px 0 5px;
+		}
+		header .header-left-column {
+			margin: 0;
+			width: 58%;
+		}
+		header .header-left-column img {
+			width: 100%;
+		}
+		.content-wrap aside.quarter-left {
+			width: 40%;
+		}
 	}
-	.container-fluid.marginb60 {
-		margin-bottom: 40px !important;
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+		header .logo img {
+			top: -8em;
+		}
 	}
-	.vc_hover img {
-		height: 104px;
-		margin-top: 12%;
-		width: 104px;
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
 	}
-	.content-wrap aside.quarter-left {
-		width: 50%;
+
+	@media only screen and (min-device-width: 1441px) {
+
 	}
-	.display-work-wrap {
-		margin: 0 10px 0;
-		width: 95%;
-	}
-}
-@media (min-width: 768px) and (max-width: 1032px) {
-	header {
-		padding: 0 15px 0 5px;
-	}
-	header .header-left-column {
-		margin: 0;
-		width: 58%;
-	}
-	header .header-left-column img {
-		width: 100%;
-	}
-	.content-wrap aside.quarter-left {
-		width: 40%;
-	}
-}
-@media (min-width: 992px) and (max-width: 1199px) {	
-	.vc_hover img {
-		margin-top: 10%;
-	}
-}
+
 @media (max-width: 937px){
 	#container.grid {
 		margin-left: auto;
