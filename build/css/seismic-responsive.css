@@ -351,6 +351,10 @@ body .rt-mainrow [class*="rt-pull"] {
 		margin-left: 0;
 		top: 0;
 	}
+	.about-us .content-wrap {
+		margin-top: 0;
+		width: 100%;
+	}
 }
 
 /* iPhone5 ====================================== */

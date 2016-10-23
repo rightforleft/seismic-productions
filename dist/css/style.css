@@ -145,7 +145,7 @@ body {
 	display: flex;
 }
 p, a, h1, h2, h3, h4, label, legend, button{
-	font-family: 'Cicle_Semi',Helvetica,Arial,sans-serif;
+	font-family: 'Gotham',Helvetica,Arial,sans-serif;
 	font-weight: 200;
 	font-style: normal;
 	letter-spacing:1px;
@@ -567,10 +567,10 @@ button:focus {
 }
 
 /* ==================================== ABOUT US ==================================== */
-.container.seismic-team-container {
+.container.seismic-about-container {
 	overflow: auto;
 }
-.about-us{
+.about-us {
 	overflow: auto;
 	width: 100%;
 	position: absolute;
@@ -578,42 +578,46 @@ button:focus {
 	padding-bottom: 120px;
 }
 
-.about-us .content-wrap{
-	height: 100%;
+.about-us .content-wrap {
 	overflow: auto;
-	padding: 20px;
+	margin-top: 18%;
+	max-width: 774px;
+	width: 76%;
 }
 
-.content-wrap aside.quarter-left{
-	background-color: rgba(0,0,0,.6);
-	float: left;
-	margin-left: 2%;
-	margin-top: 40px;
-	padding: 2%;
-	width: 30%;
+.about-us .content-wrap p {
+	color: #fff;
+	font-size: 1.3em;
+	line-height: 1.7rem;
+	text-shadow: 2px 2px #000;
 }
 
-.content-wrap aside p{
-	color: #aaa;
-	font-size: 15px;
-	line-height: 1.5rem;
+.about-us .content-wrap span {
+	font-weight: bold;
 }
 
-.content-wrap aside span{
-	color: #2571a2;
-	font-size: 16px;
-}
-
-.seismic-team-container{
+.seismic-about-container {
 	background-color: #000;
-	background-image: url('../images/seismic-team.jpg');
-	background-position: center top;
+	background-image: url('../images/about-bg.jpg');
+	background-position: center bottom;
 	background-repeat:no-repeat;
+	background-size: cover;
+	bottom: 0;
 	min-height: 100%;
 	position: fixed;
-	top: 0;
 	width: 100%;
 	z-index: 1;
+}
+.owners {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    width: 100%;
+}
+.owners img {
+	max-height: 555px;
 }
 
 /* ===================================== OUR WORK ===================================== */

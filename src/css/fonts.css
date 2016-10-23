@@ -89,3 +89,12 @@
     font-weight: normal;
     font-style: normal;
 }
+/* Gotham =============================================================*/
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham/2596CF_0_0.eot');
+    src: url('../fonts/Gotham/2596CF0_0_.woff') format('woff'),
+         url('../fonts/Gotham/2596CF_0_0.ttf') format('truetype')
+    font-weight: normal;
+    font-style: normal;
+}
