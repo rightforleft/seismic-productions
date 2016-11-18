@@ -10057,12 +10057,12 @@ body,
 
 /* NAV MENU ITEMS */
 .menu-wrap a {
-	color: #b8b7ad;
+	color: #fff;
 }
 
 .menu-wrap a:hover,
 .menu-wrap a:focus {
-	color: #c94e50;
+	color: #003554;
 }
 
 .content-wrap {
@@ -10227,8 +10227,7 @@ body,
 }
 
 .icon-list a:hover {
-	background-color: #2571a2;
-	color:#fff;
+	color:#003554;
 	text-decoration:none;
 }
 

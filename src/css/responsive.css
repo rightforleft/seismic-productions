@@ -1,11 +1,40 @@
+/* Smaller Monitors */
+@media (max-width: 1080px){
+	#container.grid {
+		margin-left: 4%;
+		margin-right: 4%;
+	}
+}
+@media (max-width: 937px){
+	#container.grid {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	header .logo img {
+		left: -89px;
+		max-width: 800px;
+		top: -8.75em;
+	}
+}
+@media (max-width: 700px){
+	header .logo img {
+		max-width: 680px;
+		top: -7em;
+	}
+}
+
+
 /* Mobile - General */
 @media only screen and (min-device-width: 320px) and (max-device-width: 667px) {
+	header {
+		height: 100px;
+	}
 	header .logo img {
 		margin-left: 0;
 		top: 0;
 	}
-	.about-us .content-wrap {
-		margin-top: 0;
+	.content-wrap {
+		overflow: auto;
 		width: 100%;
 	}
 }
@@ -17,7 +46,7 @@
 			margin-bottom: 0;
 		}
 		header .logo img {
-			top: -3em;
+			top: -4em;
 		    	left: -5em;
 		    	width: 150%;
 		}
@@ -59,6 +88,15 @@
 		.isotope {
 			margin-left: 3%;
 		}
+		.owners img {
+    			margin-left: -13%;
+		}
+		.about-us {
+			top: 7em;
+		}
+		.about-us .info {
+			margin: 35% 3% 20%;
+		}
 	}
 
 /* Galaxy Nexus Landscape ========================*/
@@ -67,15 +105,14 @@
 	}  
 
 /* iPhone6 PORTRAIT ==============================*/
-	@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+	@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
 		header {
 			border-bottom: 1px solid #888;
 			margin-bottom: 0;
 		}
 		header .logo img {
-			top: -4em;
-		    	left: -6em;
-		    	width: 150%;
+			top: -5.5em;
+		    	left: -6.5em;
 		}		
 		footer {
 			height: auto;
@@ -109,25 +146,70 @@
 		.grid-item.grid-item--width2 { 
 			width: 99%;
 		}
+		.about-us .info {
+			margin-top: 41%;
+		}
+		.owners img {
+			margin-left: -13%;
+		}
 	}
 
 /* iPhone6 & 6Plus PORTRAIT ======================*/
 	@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
 		header .logo img {
-			top: -5em;
+			top: -6em;
 		    	left: -7em;
 		    	width: 150%;
+		}
+		footer {
+			height: auto;
+			line-height: 1em;
+			padding: 5px;
+			text-align: center;
+		}
+		.container-fluid.marginb60 {
+			margin-bottom: 40px !important;
+		}
+		.vc_hover img {
+			height: 86px;
+			margin-top: 4%;
+			width: 86px;
+		}
+		.content-wrap aside.quarter-left {
+			margin-top: 0;
+			width: 100%;
+		}
+		.display-work-wrap {
+			margin: 0 10px 0;
+			width: 95%;
+		}
+		.grid-item,
+		.grid-sizer {
+			width: 48%;
+		}
+		.gutter-sizer {
+			width: 3%;
+		}
+		.grid-item.grid-item--width2 { 
+			width: 99%;
+		}
+		.about-us {
+			top: 7em;
+		}
+		.owners img {
+			margin-left: -13%;
 		}
 	}
 
 /* iPHONE 6 & 6Plus Landscape =================== */
-	@media only screen and (min-device-width : 375px) and (max-device-width : 736px) and (orientation : landscape) { 
+	@media only screen and (min-device-width : 667px) and (max-device-width : 736px) and (orientation : landscape) { 
 		header {
 			border-bottom: 1px solid #888;
+			height: 64px;
 			margin-bottom: 0;
 		}
 		header .logo img {
-		    top: -7em;
+		    top: -8.75em;
 		    left: 0;
 		    width: 100%;
 		}
@@ -158,13 +240,61 @@
 			margin: 0 10px 0;
 			width: 95%;
 		}
+		.about-us {
+			top: 64px;
+		}
+		.about-us .content-wrap {
+			margin: 0;
+			max-width: 450px;
+		}
+		.about-us .info {
+			margin: 10px 0 10% 10px;
+		}
+		.owners {
+			margin-right: 10px;
+			text-align: right;
+		}
+	}
+
+/* iPHONE 6Plus Landscape =================== */
+	@media only screen and (min-device-width : 668px) and (max-device-width : 736px) and (orientation : landscape) { 
+		header .logo img {
+			top: -9.75em;
+		}
 	}
 
 /* iPhone5 Landscape =============================*/
 	@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+		header {
+			height: 58px;
+		}
 		header .logo img {
-			top: -4em;
-		    	left: -4em;
+			top: -8em;
+		    	width: 108%;
+		}
+		.about-us {
+			top: 58px;
+		}
+		.about-us .content-wrap {
+			text-align: left;
+		}
+		.about-us .info {
+			margin-bottom: 20%;
+			margin-top: 10px;
+			width: 64%;
+		}
+		.owners {
+			margin-right: 10px;
+			text-align: right;
+		}
+		.owners img {
+			max-height: 260px;
+		}
+		.icon-list a {
+			padding: 0.6em;
+		}
+		.menu-wrap .contact-box {
+			bottom: 18%;
 		}
 	}
 
@@ -197,15 +327,3 @@
 
 	}
 
-@media (max-width: 937px){
-	#container.grid {
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-@media (min-width: 938px) and (max-width: 1080px){
-	#container.grid {
-		margin-left: 4%;
-		margin-right: 4%;
-	}
-}
