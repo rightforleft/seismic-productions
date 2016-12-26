@@ -611,19 +611,19 @@ button:focus {
 }
 .about-us .content-wrap p {
 	color: #fff;
-	font-family: "Gotham SSm A", "Gotham SSm B";
+	font-family: "Gotham SSm A", "Gotham SSm B", "Gotham";
 	font-size: 1.1em;
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 2em;
 	letter-spacing: 2px;
 	text-shadow: 2px 2px 5px #000;
 }
 
 .about-us .content-wrap span {
-	font-family: "Gotham A", "Gotham B";
+	font-family: "Gotham SSm A", "Gotham SSm B", "Gotham";
     	font-style: normal;
-    	font-weight: 900;
+    	font-weight: 700;
 }
 
 .seismic-about-container {
