@@ -106,6 +106,9 @@ button {
 /*- ====================== RESET COMPLETE... ...CHANGEABLE STYLES HERE ====================== */
 
 /* Clearfix */
+.clearfix {
+	clear: both;
+}
 .clearfix:before,
 .clearfix:after {
     content: " ";
