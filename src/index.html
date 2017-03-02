@@ -17,23 +17,26 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		<!-- Fav and touch icons -->
-		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/manifest.json">
-		<meta name="msapplication-TileColor" content="transparent">
-		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-		<meta name="theme-color" content="transparent">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+		<link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+		<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+		<meta name="application-name" content="&nbsp;"/>
+		<meta name="msapplication-TileColor" content="#FFFFFF" />
+		<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+		<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+		<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+		<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+		<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 		<!-- CSS Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
@@ -56,11 +59,23 @@
 		    <script type="text/javascript" src="js/html5shiv.js"></script>
 		    <script type="text/javascript" src="js/respond.min.js"></script>
 		  <![endif]--> 
-		
+	
+		<style>
+			body {
+			  display: none;
+			}
+		</style>
+
+		<script>
+			$(window).load(function() {
+			  $("body").show();
+			});
+		</script>
+
 	</head>
 
 	<body data-smooth-scrolling="1" class="home-body contact-body"> 
-	<div class="preload-images"></div>
+
 	<div class="container">
 
 		<!-- MOBILE NAV -->
@@ -139,115 +154,136 @@
 				<div class="container-fluid feature-grid">
 					<div class="row margin-sm clearfix">
 
-						<!--A Monster Calls-->
+						<!--Beauty and the Beast-->
 						<div class="portfolio-item col-md-6 col-sm-4 col-xs-6">
-							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="400ms">
-								<a href="videos/a-monster-calls.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img1" alt="A Monster Calls" src="images/productions/thumbs-lg/a-monster-calls-thumb-lg.jpg" /></a>
+							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="100ms">
+								<a href="videos/beauty-and-the-beast.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img1" alt="Beauty and the Beast" src="images/productions/thumbs-lg/beauty-and-the-beast_thumb-lg.jpg" /></a>
 							</div>
 						</div>
 
-						<!--Boo! A Madea Halloween-->
-						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
-							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="400ms">
-								<a href="videos/boo-a-madea.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img2" alt="Boo! A Madea Halloween" src="images/productions/thumbs-lg/boo-madea-thumb-lg.jpg" /></a>
-							</div>
-						</div>
-
-						<!--Nerve-->
-						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
-							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="400ms">
-								<a href="videos/nerve.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img3" alt="Nerve" src="images/productions/thumbs-lg/nerve-thumb-lg.jpg" /></a>
-							</div>
-						</div>
-
-						<!--Bad Santa 2-->
+						<!--Moonlight-->
 						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
 							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="100ms">
-								<a href="videos/bad-santa-2.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img4" alt="Bad Santa 2" src="images/productions/thumbs-lg/bad-santa-2-thumb-lg.jpg" /></a>    
+								<a href="videos/moonlight.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img2" alt="Moonlight" src="images/productions/thumbs-lg/moonlight-thumb-lg.jpg" /></a>
 							</div>
 						</div>
 
-						<!--Now You See Me 2-->
+						<!--A Monster Calls-->
 						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
 							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="400ms">
-								<a href="videos/now-you-see-me-2.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img5" alt="Now You See Me 2" src="images/productions/thumbs-lg/now-you-see-me-2-thumb-lg.jpg" /></a>
+								<a href="videos/a-monster-calls.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img3" alt="A Monster Calls" src="images/productions/thumbs-lg/a-monster-calls-thumb-lg.jpg" /></a>
+							</div>
+						</div>
+
+						<!--20th Century Women-->
+						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
+							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="400ms">
+								<a href="videos/twentieth-century-women.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img4" alt="20th Century Women" src="images/productions/thumbs-lg/twentieth-century-women-thumb-lg.jpg" /></a>
+							</div>
+						</div>
+
+						<!--Office Christmas Party-->
+						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
+							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="100ms">
+								<a href="videos/office-christmas-party.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img5" alt="Bad Santa 2" src="images/productions/thumbs-lg/office-christmas-party-thumb-lg.jpg" /></a>    
+							</div>
+						</div>
+
+						<!--Fist Fight-->
+						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
+							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="800ms">
+								<a href="videos/fist-fight.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img6" alt="Daddy's Home" src="images/productions/thumbs-lg/fist-fight-thumb-lg.jpg" /></a>
 							</div>
 						</div>
 
 						<!--The Jungle Book-->
 						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
 							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="100ms">
-								<a href="videos/the-jungle-book.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img6" alt="The Jungle Book" src="images/productions/thumbs-lg/the-jungle-book-thumb-lg.jpg" /></a>
+								<a href="videos/the-jungle-book.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img7" alt="The Jungle Book" src="images/productions/thumbs-lg/the-jungle-book-thumb-lg.jpg" /></a>
 							</div>
 						</div>
 
-						<!--Florence Foster Jenkins-->
+						<!--Fences-->
+						<div class="portfolio-item col-md-6 col-sm-4 col-xs-6 pull-right">
+							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="400ms">
+								<a href="videos/fences.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img8" alt="Fences" src="images/productions/thumbs-lg/fences-thumb-lg.jpg" /></a>
+							</div>
+						</div>
+
+						<!--The Last Word-->
 						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
 							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="100ms">
-								<a href="videos/florence-foster-jenkins.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img7" alt="Florence Foster Jenkins" src="images/productions/thumbs-lg/florence-foster-jenkins-thumb-lg.jpg" /></a>
+								<a href="videos/the-last-word.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img9" alt="The Last Word" src="images/productions/thumbs-lg/the-last-word-thumb-lg.jpg" /></a>
 							</div>
 						</div>
 
 						<!--Cinderella-->
 						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
 							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="1200ms">
-								<a href="videos/cinderella.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img8" alt="Cinderella" src="images/productions/thumbs-lg/cinderella-thumb-lg.jpg" /></a>
+								<a href="videos/cinderella.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img10" alt="Cinderella" src="images/productions/thumbs-lg/cinderella-thumb-lg.jpg" /></a>
 							</div>
 						</div>
 
-						<!--Daddy's Home-->
-						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
-							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="800ms">
-								<a href="videos/daddys-home.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img9" alt="Daddy's Home" src="images/productions/thumbs-lg/daddys-home-thumb-lg.jpg" /></a>
+						<!--Sausage Party-->
+						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6 clearfix">
+							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="400ms">
+								<a href="videos/sausage-party.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img11" alt="Sausage Party" src="images/productions/thumbs-lg/sausage-party-thumb-lg.jpg" /></a>
 							</div>
 						</div>
 
-						<!--War Dogs-->
+						<!--The Shack-->
 						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
 							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="1800ms">
-								<a href="videos/war-dogs.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img10" alt="War Dogs" src="images/productions/thumbs-lg/war-dogs-thumb-lg.jpg" /></a> 
+								<a href="videos/the-shack.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img12" alt="War Dogs" src="images/productions/thumbs-lg/the-shack-thumb-lg.jpg" /></a> 
 							</div>
 						</div>
 
 						<!--Me Before You-->
 						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
 							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="100ms">
-								<a href="videos/me-before-you.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img11" alt="Me Before You" src="images/productions/thumbs-lg/me-before-you-thumb-lg.jpg" /></a>
+								<a href="videos/me-before-you.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img13" alt="Me Before You" src="images/productions/thumbs-lg/me-before-you-thumb-lg.jpg" /></a>
 							</div>
 						</div>
 
-						<!--Room-->
+						<!--Boo! A Madea Halloween-->
 						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
+							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="400ms">
+								<a href="videos/boo-a-madea.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img14" alt="Boo! A Madea Halloween" src="images/productions/thumbs-lg/boo-madea-thumb-lg.jpg" /></a>
+							</div>
+						</div>
+
+						<!--La La Land-->
+						<div class="portfolio-item col-md-6 col-sm-4 col-xs-6">
 							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="100ms">
-								<a href="videos/room.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img12" alt="Room" src="images/productions/thumbs-lg/room-thumb-lg.jpg" /></a>
+								<a href="videos/la-la-land.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img18" alt="Florence Foster Jenkins" src="images/productions/thumbs-lg/la-la-land-thumb-lg.jpg" /></a>
 							</div>
 						</div>
 						
 						<!--The Huntsman-->
 						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
 							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="100ms">
-								<a href="videos/huntsman.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img13" alt="The Huntsman" src="images/productions/thumbs-lg/huntsman-thumb-lg.jpg" /></a>
+								<a href="videos/huntsman.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img15" alt="The Huntsman" src="images/productions/thumbs-lg/huntsman-thumb-lg.jpg" /></a>
+							</div>
+						</div>
+
+						<!--Now You See Me 2-->
+						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
+							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="400ms">
+								<a href="videos/now-you-see-me-2.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img16" alt="Now You See Me 2" src="images/productions/thumbs-lg/now-you-see-me-2-thumb-lg.jpg" /></a>
 							</div>
 						</div>
 
 						<!--Central Intelligence-->
 						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
 							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="200ms">
-								<a href="videos/central-intelligence.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img14" alt="Central Intelligence" src="images/productions/thumbs-lg/central-intelligence-thumb-lg.jpg" /></a>
+								<a href="videos/central-intelligence.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img17" alt="Central Intelligence" src="images/productions/thumbs-lg/central-intelligence-thumb-lg.jpg" /></a>
 							</div>
 						</div>
 
-						<!--Barbershop-->
+						<!--Great Gilly Hopkins-->
 						<div class="portfolio-item col-md-3 col-sm-4 col-xs-6">
-							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="400ms">
-								<a href="videos/barbershop.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img15" alt="Barbershop" src="images/productions/thumbs-lg/barbershop-thumb-lg.jpg" /></a>
-							</div>
-						</div>
-
-						<!--Sausage Party-->
-						<div class="portfolio-item col-md-6 col-sm-4 col-xs-6">
-							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="400ms">
-								<a href="videos/sausage-party.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img16" alt="Sausage Party" src="images/productions/thumbs-lg/sausage-party-thumb-lg.jpg" /></a>
+							<div class="rl_anim rl_anim-slide wow slideInLeft" data-wow-duration="2s" data-wow-delay="200ms">
+								<a href="videos/great-gilly-hopkins.html" data-fancybox-type="iframe" class="info various fancy fancybox"><img id="img17" alt="Great Gilly Hopkins" src="images/productions/thumbs-lg/great-gilly-hopkins-thumb-lg.jpg" /></a>
 							</div>
 						</div>
 
@@ -264,6 +300,26 @@
 		</div><!--/Content-Wrap-->
 	</div><!--/Container-->
 
+	<!-- Preload Images -->
+	<div id="preload">
+	   <img src="images/productions/thumbs-lg/la-la-land-lg.jpg" width="1" height="1" alt="Image 01" />
+	   <img src="images/productions/thumbs-lg/boo-madea-thumb-lg.jpg" width="1" height="1" alt="Image 02" />
+	   <img src="images/productions/thumbs-lg/a-monster-calls-thumb-lg.jpg" width="1" height="1" alt="Image 03" />
+	   <img src="images/productions/thumbs-lg/bad-santa-2-thumb-lg.jpg" width="1" height="1" alt="Image 04" />
+	   <img src="images/productions/thumbs-lg/now-you-see-me-2-thumb-lg.jpg" width="1" height="1" alt="Image 05" />
+	   <img src="images/productions/thumbs-lg/the-jungle-book-thumb-lg.jpg" width="1" height="1" alt="Image 06" />
+	   <img src="images/productions/thumbs-lg/nerve-thumb-lg.jpg" width="1" height="1" alt="Image 07" />
+	   <img src="images/productions/thumbs-lg/cinderella-thumb-lg.jpg" width="1" height="1" alt="Image 08" />
+	   <img src="images/productions/thumbs-lg/daddys-home-thumb-lg.jpg" width="1" height="1" alt="Image 09" />
+	   <img src="images/productions/thumbs-lg/war-dogs-thumb-lg.jpg" width="1" height="1" alt="Image 10" />
+	   <img src="images/productions/thumbs-lg/me-before-you-thumb-lg.jpg" width="1" height="1" alt="Image 11" />
+	   <img src="images/productions/thumbs-lg/room-thumb-lg.jpg" width="1" height="1" alt="Image 12" />
+	   <img src="images/productions/thumbs-lg/huntsman-thumb-lg.jpg" width="1" height="1" alt="Image 13" />
+	   <img src="images/productions/thumbs-lg/central-intelligence-thumb-lg.jpg" width="1" height="1" alt="Image 14" />
+	   <img src="images/productions/thumbs-lg/barbershop-thumb-lg.jpg" width="1" height="1" alt="Image 15" />
+	   <img src="images/productions/thumbs-lg/sausage-party-thumb-lg.jpg" width="1" height="1" alt="Image 16" />
+	</div>
+
 	<!-- SCRIPTS -->
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
     	<script type="text/javascript" src="js/plugins.js"></script>
@@ -276,6 +332,7 @@
 	<script>
 	 new WOW().init();
 	</script>
+
 
 	</body>
 

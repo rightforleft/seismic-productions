@@ -176,6 +176,8 @@ module.exports = function(grunt) {
 			},
 			fonts: {
 				files: [
+					//Gotham
+					{expand: false, src: ['src/fonts/516594/*'], dest: 'dist/fonts/516594/'},
 					//Cicle Gordita
 					{expand: false, src: ['src/fonts/Cicle_Gordita-webfont.eot'], dest: 'dist/fonts/Cicle_Gordita-webfont.eot'},
 					{expand: false, src: ['src/fonts/Cicle_Gordita-webfont.svg'], dest: 'dist/fonts/Cicle_Gordita-webfont.svg'},

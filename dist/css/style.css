@@ -106,6 +106,9 @@ button {
 /*- ====================== RESET COMPLETE... ...CHANGEABLE STYLES HERE ====================== */
 
 /* Clearfix */
+.clearfix {
+	clear: both;
+}
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -124,14 +127,14 @@ button {
 	box-sizing: border-box; 
 	*behavior: url(../scripts/boxsizing.htc);
 	}
-	
 html, body{
-	height: 100%;
 	line-height: 1.3em;
 	text-align:left;
 	}
 html {
+	min-height: 100%;
 	overflow-y: scroll;
+	position: relative;
 }
 html.home {
 	height: auto;
@@ -143,10 +146,11 @@ body {
 	align-items: center;
 	display: -webkit-flex;
 	display: flex;
+	height: 100%;
 }
 p, a, h1, h2, h3, h4, label, legend, button{
-	font-family: 'Gotham',Helvetica,Arial,sans-serif;
-	font-weight: 200;
+	font-family: 'Gotham SSm A', 'Gotham SSm B','Gotham';
+	font-weight: 400;
 	font-style: normal;
 	letter-spacing:1px;
 	color: #000;
@@ -252,7 +256,8 @@ header .logo img {
     max-width: 1000px;
     right: 0;
     top: -12em;
-    width: 100%
+    -webkit-transition: all 2s; /* Safari */
+    transition: all 2s;
 }
 header .logo img.large-rings {
     z-index: -1;
@@ -446,7 +451,8 @@ nav {
 .display-work-wrap ul li a {
 	background-color: transparent;
 	display: inline-block;
-	font-family: 'Cicle_Gordita',Helvetica,Arial,sans-serif;
+	font-family: 'Gotham SSm A", "Gotham SSm B',Helvetica,Arial,sans-serif;
+	font-weight: 300;
 	height: 34px;
 	letter-spacing: .17em;
 	margin: 0;
@@ -572,28 +578,55 @@ button:focus {
 }
 .about-us {
 	overflow: auto;
-	width: 100%;
 	position: absolute;
-	z-index: 5;
-	padding-bottom: 120px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 164px;
+	width: 100%;
+	
 }
 
 .about-us .content-wrap {
 	overflow: auto;
-	margin-top: 18%;
-	max-width: 774px;
-	width: 76%;
+	max-width: 850px;
+	white-space: nowrap;
+	text-align: center;
 }
 
+.about-us .content-wrap:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 0;
+	/* adjust for white space between pseudo element and next sibling */
+	margin-right: -.25em;
+	/* stretch line height */
+	height: 100%; 
+}
+
+.about-us .info {
+	display: inline-block;
+	margin: 0 3%;
+	text-align: left;
+    vertical-align: middle;
+    white-space: normal;
+}
 .about-us .content-wrap p {
 	color: #fff;
-	font-size: 1.3em;
-	line-height: 1.7rem;
-	text-shadow: 2px 2px #000;
+	font-family: "Gotham SSm A", "Gotham SSm B", "Gotham";
+	font-size: 1.1em;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 2em;
+	letter-spacing: 2px;
+	text-shadow: 2px 2px 5px #000;
 }
 
 .about-us .content-wrap span {
-	font-weight: bold;
+	font-family: "Gotham SSm A", "Gotham SSm B", "Gotham";
+    	font-style: normal;
+    	font-weight: 700;
 }
 
 .seismic-about-container {
@@ -611,13 +644,18 @@ button:focus {
 .owners {
     bottom: 0;
     left: 0;
-    position: fixed;
+    overflow: hidden;
+    padding-top: 2%;
+    position: absolute;
     right: 0;
     text-align: center;
-    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 .owners img {
-	max-height: 555px;
+	height: 100%;
+	max-width: none;
+	vertical-align: bottom;
 }
 
 /* ===================================== OUR WORK ===================================== */
@@ -966,7 +1004,7 @@ input[type="checkbox"] {
 }
 .show-map{
 	position: absolute;
-	left: 170px;
+	right: 30%;
 	top: 47px;
 	background-image: url(../images/map-point.png);
 	width: 24px;
@@ -1213,4 +1251,6 @@ footer {
 .display-block {
 	display: block !important;
 }
+
+div#preload { display: none; }
  
